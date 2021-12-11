@@ -1,4 +1,4 @@
-# desmodel
+# desmodels
 ## Credits
 Credit to JohnDoesStuff on Youtube for making the Cartesian coordinates functions.<br>I do not know nearly enough of trigonometry to make that.<br>
 https://www.youtube.com/channel/UCUTey_NRgvUNBUvtY0KY4Ew
