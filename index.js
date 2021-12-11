@@ -44,7 +44,7 @@ setSlider("d = 3", "5", "25")
 setSlider("l_{ineopacity} = 0.1", "0", "1")
 setSlider("f_{illopacity} = 0", "0", "1")
 
-//the magic
+//the magic                    !CHANGE "TORUS.TXT" TO WHATEVER YOU WANT, AS LONG IS ITS A WAVEFRONT FILE!
 fetch('http://localhost:5500/models/torus.txt')
   .then(response => response.text())
   .then((data) => {
