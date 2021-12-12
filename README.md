@@ -4,7 +4,7 @@ Credit to JohnDoesStuff on Youtube for making the Cartesian coordinates function
 https://www.youtube.com/channel/UCUTey_NRgvUNBUvtY0KY4Ew
 
 ## What does it do?
-Executes JS on a Desmos embed to generate expressions in 3D space
+Executes JS on a Desmos embed to generate expressions in 3D space from Wavefront data
 
 ## How do I operate it?
 Use something like a VS Code Live Server to run it. <br>
