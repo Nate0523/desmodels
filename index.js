@@ -3,6 +3,7 @@
 //It might take a while to load all of the polygons and will *literally* run at 1fps if you try to import any .obj that has any face count that is even remotely high.
 //Easily runnable in VS Code Live Server
 
+//these variables are required to interact with the embedded calculator.
 var elt = document.getElementById('calculator');
 var Calc = Desmos.GraphingCalculator(elt);
 
@@ -51,7 +52,8 @@ fetch('http://localhost:5500/models/torus.txt')
     var lines = data.split("\r\n")
     var facelist = []
     var vertices = []
-
+    
+    //holy shit this sucks
     for (var i = 0; i < lines.length; i++) {
         if (lines[i][0] == "v") {
             if (lines[i][1] != "t") { 
