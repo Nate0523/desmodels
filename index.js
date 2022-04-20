@@ -59,12 +59,16 @@ fetch('http://localhost:5500/models/torus.txt')
             if (lines[i][1] != "t") { 
                 if (lines[i][1] != "n") { 
                     if (lines[i][1] != "p") { 
+                        //perhaps one day if i ever decide to touch this code again, i will write
+                        //better code to check if for faces
                         vertices[vertices.length] = lines[i].slice(2,lines[i].length)
                     }
                 }
             }
         }
     }
+    
+    //the following assigns faces to a list and grabs the vertices from the faces which then assigns the vertices to a list.
 
     for (var i = 0; i < lines.length; i++) {
         if (lines[i][0] == "f") {
@@ -78,6 +82,7 @@ fetch('http://localhost:5500/models/torus.txt')
         preformatfaces[preformatfaces.length] = facelist[i].split(" ")
     }
 
+    //this loop assigns functions in desmos using the coordinates of the vertices.
     for (var i = 0; i < preformatfaces.length; i++) {
         var verts = []
         for (var n = 0; n < preformatfaces[i].length; n++) {
@@ -85,6 +90,7 @@ fetch('http://localhost:5500/models/torus.txt')
             console.log(verts)
         }
         if (verts.length == 3) {
+            //johndoesstuff's perspective 3d function
             setExpression("\\operatorname{polygon}\\left(c_{toc}\\left("+vertices[verts[0]-1].split(" ").join(",")+"\\right),c_{toc}\\left("+vertices[verts[1]-1].split(" ").join(",")+"\\right),c_{toc}\\left("+vertices[verts[2]-1].split(" ").join(",")+"\\right)\\right)","#000000")
         } else {
             setExpression("\\operatorname{polygon}\\left(c_{toc}\\left("+vertices[verts[0]-1].split(" ").join(",")+"\\right),c_{toc}\\left("+vertices[verts[1]-1].split(" ").join(",")+"\\right),c_{toc}\\left("+vertices[verts[2]-1].split(" ").join(",")+"\\right),c_{toc}\\left("+vertices[verts[3]-1].split(" ").join(",")+"\\right)\\right)","#000000")
